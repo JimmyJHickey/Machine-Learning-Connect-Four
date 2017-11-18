@@ -146,7 +146,8 @@ class GameBoard:
 
         while i < self.ROWS:
             while j < self.COLUMNS:
-                print(self.board[j][i], end=' ')
+                print('-' if self.board[j][i] == 0 else 'X' if self.board[j][i] == 1 else 'O', end=' ')
+                # print(self.board[j][i], end=' ')
                 j += 1
             print("")
             i += 1
@@ -161,17 +162,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
