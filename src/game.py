@@ -37,26 +37,33 @@ class GameBoard:
             game_turns.append(play_column)
             winner = self.play_piece(self, int(play_column))
 
-            if winner > 0:
-                print("Winner is: " + str(winner))
-                self.print_board(self)
-                print("Moves: ", *game_turns)
-                return winner
-
             self.print_board(self)
 
-            if self.turn == self.RED:
-                self.turn = self.BLACK
+            if winner > 0:
+                print("Winner is: " + str(winner))
+                print("Moves: ", *game_turns)
+                return winner
+            elif winner < 0:
+                print("illegal move, try again")
             else:
-                self.turn = self.RED
+
+
+                if self.turn == self.RED:
+                    self.turn = self.BLACK
+                else:
+                    self.turn = self.RED
 
     # accepts the column that would like to be played in
     def play_piece(self, col):
             """play a piece on the board"""
 
+            # if the selected column doesn't exist
+            if col < 0 or col > 6:
+                return -1
+
             # if the selected column is full of pieces
             if self.board[col][0] != 0:
-                return 1
+                return -1
 
             # topmost open slot in the column
             row = 0
