@@ -31,7 +31,9 @@ class GameBoard:
     def game_loop(self):
         game_turns = []
         while 1:
-            play_column = input("Enter a column to play a piece: ")
+            prompt = "Red" if self.turn == 1 else "Black"
+            prompt += " enter a column to play a piece: "
+            play_column = input(prompt)
             game_turns.append(play_column)
             winner = self.play_piece(self, int(play_column))
 
@@ -119,7 +121,7 @@ class GameBoard:
                     break
             if counter >= 4:
                 print("!!! winner !!!")
-                return turn
+                return self.turn
 
         # check for wins with slope of 1
         counter = 0
