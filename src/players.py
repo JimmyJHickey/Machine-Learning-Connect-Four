@@ -1,3 +1,5 @@
+import settings
+settings.init()
 
 
 class Player:
@@ -21,3 +23,4 @@ class RandomPlayer(Player):
 rp1 = RandomPlayer()
 move = rp1.make_move()
 print(move)
+print(settings.board)

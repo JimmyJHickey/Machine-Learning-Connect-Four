@@ -9,24 +9,17 @@
 
 # still learning python, will break many many python conventions
 
+import settings
+settings.init()
+
 
 class GameBoard:
-    RED = 1
-    BLACK = 2
-
-    COLUMNS = 7
-    ROWS = 6
-
+    board = settings.board
+    ROWS = settings.ROWS
+    COLUMNS = settings.COLUMNS
+    RED = settings.RED
+    BLACK = settings.BLACK
     turn = RED
-
-    #         top            bottom
-    board = [[0, 0, 0, 0, 0, 0],  # left
-             [0, 0, 0, 0, 0, 0],
-             [0, 0, 0, 0, 0, 0],
-             [0, 0, 0, 0, 0, 0],
-             [0, 0, 0, 0, 0, 0],
-             [0, 0, 0, 0, 0, 0],
-             [0, 0, 0, 0, 0, 0]]  # right
 
     def game_loop(self):
         game_turns = []
@@ -46,7 +39,6 @@ class GameBoard:
             elif winner < 0:
                 print("illegal move, try again")
             else:
-
 
                 if self.turn == self.RED:
                     self.turn = self.BLACK
