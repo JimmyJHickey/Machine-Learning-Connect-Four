@@ -2,6 +2,7 @@
 # To be used for machine learning final project
 # Ben Andrews
 # 11-11-17 <- fix that date Jimmy, I dare you
+# *11 November 2017
 
 # inspired by code from Jared Dupont
 # www.github.com/jrddupont
@@ -28,13 +29,16 @@ class GameBoard:
              [0, 0, 0, 0, 0, 0]]  # right
 
     def game_loop(self):
+        game_turns = []
         while 1:
             play_column = input("Enter a column to play a piece: ")
+            game_turns.append(play_column)
             winner = self.play_piece(self, int(play_column))
 
             if winner > 0:
                 print("Winner is: " + str(winner))
                 self.print_board(self)
+                print("Moves: ", *game_turns)
                 return winner
 
             self.print_board(self)
@@ -68,7 +72,7 @@ class GameBoard:
     def find_winner(self, col, row):
         """finds if the last play resulted in a winning play"""
 
-        # check for a horizotal win
+        # check for a horizontal win
         counter = 0
         for i in range(self.COLUMNS):
             if self.board[i][row] == self.turn:
@@ -97,7 +101,7 @@ class GameBoard:
                     break
             if counter >= 4:
                 print("!!! winner !!!")
-                return turn
+                return self.turn
 
             i += 1
 
