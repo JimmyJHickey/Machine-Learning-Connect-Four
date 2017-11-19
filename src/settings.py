@@ -9,5 +9,7 @@ def init():
     ROWS = 6
     global board
     board = []
-    for i in range(0, COLUMNS):
+    for i in range(COLUMNS):
         board.append([0] * ROWS)
+    global moves_played
+    moves_played = 0

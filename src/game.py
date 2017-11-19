@@ -9,31 +9,38 @@
 
 # still learning python, will break many many python conventions
 
+import players
 import settings
 settings.init()
 
 
 class GameBoard:
-    board = settings.board
+
     ROWS = settings.ROWS
     COLUMNS = settings.COLUMNS
     RED = settings.RED
     BLACK = settings.BLACK
     turn = RED
+    players = [0, 0, 0]
+
+    def __init__(self, players):
+        self.players[players[0].player] = players[0]
+        self.players[players[1].player] = players[1]
 
     def game_loop(self):
         game_turns = []
         while 1:
-            prompt = "Red" if self.turn == 1 else "Black"
-            prompt += " enter a column to play a piece: "
-            play_column = input(prompt)
-            game_turns.append(play_column)
-            winner = self.play_piece(self, int(play_column))
 
-            self.print_board(self)
+            play_column = self.players[self.turn].make_move()
+            game_turns.append(play_column)
+            winner = self.play_piece(play_column)
+
+            self.print_board()
+            print("\n")
 
             if winner > 0:
                 print("Winner is: " + str(winner))
+                print("Number of moves " + str(settings.moves_played))
                 print("Moves: ", *game_turns)
                 return winner
             elif winner < 0:
@@ -45,38 +52,42 @@ class GameBoard:
                 else:
                     self.turn = self.RED
 
+            print(settings.board)
+
     # accepts the column that would like to be played in
     def play_piece(self, col):
-            """play a piece on the board"""
+            """play a piece on the \
+            """
 
             # if the selected column doesn't exist
             if col < 0 or col > 6:
                 return -1
 
             # if the selected column is full of pieces
-            if self.board[col][0] != 0:
+            if settings.board[col][0] != 0:
                 return -1
 
             # topmost open slot in the column
             row = 0
-            while row < self.ROWS - 1 and self.board[col][row + 1] == 0:
+            while row < self.ROWS - 1 and settings.board[col][row + 1] == 0:
                 row += 1
 
-            self.board[col][row] = self.turn
+            settings.board[col][row] = self.turn
 
             # check for winner
-            winner = self.find_winner(self, col, row)
+            winner = self.find_winner(col, row)
+            settings.moves_played += 1
 
             return winner
 
     # accepts the column and row of the play that might have caused a win
-    def find_winner(self, col, row):
+    def find_winner(self, col, row, board_in=settings.board):
         """finds if the last play resulted in a winning play"""
 
         # check for a horizontal win
         counter = 0
         for i in range(self.COLUMNS):
-            if self.board[i][row] == self.turn:
+            if board_in[i][row] == self.turn:
                 counter += 1
             else:
                 if counter < 4:
@@ -93,7 +104,7 @@ class GameBoard:
         # check for vertical win
         counter = 0
         for i in range(self.ROWS):
-            if self.board[col][i] == self.turn:
+            if board_in[col][i] == self.turn:
                 counter += 1
             else:
                 if counter < 4:
@@ -111,7 +122,7 @@ class GameBoard:
         start_col = col - min(col, row)
         start_row = row - min(col, row)
         for i in range(self.COLUMNS):
-            if start_col + i < 7 and start_row + i < 6 and self.board[start_col + i][start_row + i] == self.turn:
+            if start_col + i < 7 and start_row + i < 6 and board_in[start_col + i][start_row + i] == self.turn:
                 counter += 1
             else:
                 if counter < 4:
@@ -127,7 +138,7 @@ class GameBoard:
         start_col = col - min(col, self.COLUMNS - row)
         start_row = row + min(col, self.COLUMNS - col)
         for i in range(self.COLUMNS):
-            if start_col + i < 7 and start_row - i < 6 and self.board[start_col + i][start_row - i] == self.turn:
+            if start_col + i < 7 and start_row - i < 6 and board_in[start_col + i][start_row - i] == self.turn:
                 counter += 1
             else:
                 if counter < 4:
@@ -147,18 +158,25 @@ class GameBoard:
 
         while i < self.ROWS:
             while j < self.COLUMNS:
-                print('-' if self.board[j][i] == 0 else 'X' if self.board[j][i] == 1 else 'O', end=' ')
-                # print(self.board[j][i], end=' ')
+                print('-' if settings.board[j][i] == 0 else 'X' if settings.board[j][i] == 1 else 'O', end=' ')
+                # print(settings.board[j][i], end=' ')
                 j += 1
             print("")
             i += 1
             j = 0
 
+    def print_hi(self):
+        print("Hi -Jimmy")
+
 
 def main():
     print("hello world")
-    game_board = GameBoard
-    game_board.game_loop(game_board)  # there has to be a better way to do this
+    human1 = players.HumanPlayer("Jimmy", 1)
+    # human2 = players.HumanPlayer("Ben", 2)
+    randplayer = players.RandomPlayer(1)
+    best_player = players.NegaMaxPlayer(2)
+    game_board = GameBoard([randplayer, best_player])
+    game_board.game_loop()  # there has to be a better way to do this
 
 
 if __name__ == "__main__":
