@@ -31,7 +31,7 @@ class GameBoard:
         game_turns = []
         while 1:
 
-            play_column = self.players[self.turn].make_move()
+            play_column = int(self.players[self.turn].make_move())
             game_turns.append(play_column)
             winner = self.play_piece(play_column)
 
@@ -41,7 +41,7 @@ class GameBoard:
             if winner > 0:
                 print("Winner is: " + str(winner))
                 print("Number of moves " + str(settings.moves_played))
-                print("Moves: ", *game_turns)
+                print("Moves: ", game_turns)
                 return winner
             elif winner < 0:
                 print("illegal move, try again")
@@ -51,8 +51,6 @@ class GameBoard:
                     self.turn = self.BLACK
                 else:
                     self.turn = self.RED
-
-            print(settings.board)
 
     # accepts the column that would like to be played in
     def play_piece(self, col):
@@ -172,10 +170,14 @@ class GameBoard:
 def main():
     print("hello world")
     human1 = players.HumanPlayer("Jimmy", 1)
-    # human2 = players.HumanPlayer("Ben", 2)
-    randplayer = players.RandomPlayer(1)
+    human2 = players.HumanPlayer("Ben", 2)
+    randplayer = players.RandomPlayer(2)
     best_player = players.NegaMaxPlayer(2)
-    game_board = GameBoard([randplayer, best_player])
+
+    mini_player = players.MinimaxPlayer(1)
+    mini_player1 = players.MinimaxPlayer(2)
+
+    game_board = GameBoard([mini_player, mini_player1])
     game_board.game_loop()  # there has to be a better way to do this
 
 
