@@ -94,7 +94,7 @@ class GameBoard:
                     break
 
             if counter >= 4:
-                print("!!! winner !!!")
+                print("!!! winner 0")
                 return self.turn
 
             i += 1
@@ -110,7 +110,7 @@ class GameBoard:
                 else:
                     break
             if counter >= 4:
-                print("!!! winner !!!")
+                print("!!! winner 1")
                 return self.turn
 
             i += 1
@@ -128,13 +128,13 @@ class GameBoard:
                 else:
                     break
             if counter >= 4:
-                print("!!! winner !!!")
+                print("!!! winner 2")
                 return self.turn
 
         # check for wins with slope of 1
         counter = 0
         start_col = col - min(col, self.COLUMNS - row)
-        start_row = row + min(col, self.COLUMNS - col)
+        start_row = row + min(col, self.COLUMNS - row)
         for i in range(self.COLUMNS):
             if start_col + i < 7 and start_row - i < 6 and board_in[start_col + i][start_row - i] == self.turn:
                 counter += 1
@@ -144,7 +144,7 @@ class GameBoard:
                 else:
                     break
             if counter >= 4:
-                print("!!! winner !!!")
+                print("!!! winner 3")
                 return self.turn
 
         # return there wasn't a winner this turn
@@ -169,17 +169,16 @@ class GameBoard:
 
 def main():
     print("hello world")
-    human1 = players.HumanPlayer("Jimmy", 1)
+    human1 = players.HumanPlayer("Evan", 1)
     human2 = players.HumanPlayer("Ben", 2)
     randplayer = players.RandomPlayer(2)
     best_player = players.NegaMaxPlayer(2)
 
-    mini_player = players.MinimaxPlayer(1)
-    mini_player1 = players.MinimaxPlayer(2)
+    mini_player1 = players.MinimaxPlayer(1)
+    mini_player2 = players.MinimaxPlayer(2)
 
-    game_board = GameBoard([mini_player, mini_player1])
+    game_board = GameBoard([mini_player1, mini_player2])
     game_board.game_loop()  # there has to be a better way to do this
-
 
 if __name__ == "__main__":
     main()

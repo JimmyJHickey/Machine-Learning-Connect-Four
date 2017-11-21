@@ -45,7 +45,7 @@ class MinimaxPlayer(Player):
 
         m = Minimax(changed_board)
 
-        x = m.bestMove(4, changed_board, 'x' if self.player == 1 else 'o')
+        x = m.bestMove(5, changed_board, 'x' if self.player == 1 else 'o')
 
         x = x[0]
 
