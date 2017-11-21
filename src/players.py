@@ -49,6 +49,10 @@ class MinimaxPlayer(Player):
 
         x = x[0]
 
+        output = self.name + " played in column " + str(x)
+
+        print(output)
+
         return x
 
     def change_board(self, board_in):

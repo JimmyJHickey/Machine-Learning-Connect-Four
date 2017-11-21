@@ -11,6 +11,7 @@
 
 import players
 import settings
+import time
 settings.init()
 
 
@@ -29,19 +30,31 @@ class GameBoard:
 
     def game_loop(self):
         game_turns = []
+        self.print_board()
+        print("\n")
+
+        #file = open("out.test", "w")
+
         while 1:
+            now = time.time()
 
             play_column = int(self.players[self.turn].make_move())
             game_turns.append(play_column)
             winner = self.play_piece(play_column)
 
+            move_time = "Move took: " + str(round(time.time() - now, 2)) + " seconds"
+            print(move_time)
+
             self.print_board()
             print("\n")
+
+            #file.write(str(settings.board) + "\n")
 
             if winner > 0:
                 print("Winner is: " + str(winner))
                 print("Number of moves " + str(settings.moves_played))
                 print("Moves: ", game_turns)
+                #file.close()
                 return winner
             elif winner < 0:
                 print("illegal move, try again")
@@ -52,10 +65,11 @@ class GameBoard:
                 else:
                     self.turn = self.RED
 
+
+
     # accepts the column that would like to be played in
     def play_piece(self, col):
-            """play a piece on the \
-            """
+            """play a piece on the board"""
 
             # if the selected column doesn't exist
             if col < 0 or col > 6:
@@ -162,6 +176,8 @@ class GameBoard:
             print("")
             i += 1
             j = 0
+
+        print("0 1 2 3 4 5 6")
 
     def print_hi(self):
         print("Hi -Jimmy")
