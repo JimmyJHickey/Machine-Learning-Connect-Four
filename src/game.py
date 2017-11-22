@@ -33,7 +33,7 @@ class GameBoard:
         self.print_board()
         print("\n")
 
-        #file = open("out.test", "w")
+        #file = open("../data/6v6.txt", "w")
 
         while 1:
             now = time.time()
@@ -48,7 +48,7 @@ class GameBoard:
             self.print_board()
             print("\n")
 
-            #file.write(str(settings.board) + "\n")
+            #file.write(str(settings.board) + " " + str(play_column) + "\n")
 
             if winner > 0:
                 print("Winner is: " + str(winner))
