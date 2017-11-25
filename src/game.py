@@ -9,6 +9,7 @@
 
 # still learning python, will break many many python conventions
 
+import os
 import players
 import settings
 import time
@@ -185,16 +186,21 @@ class GameBoard:
 
 def main():
     print("hello world")
-    human1 = players.HumanPlayer("Evan", 1)
-    human2 = players.HumanPlayer("Ben", 2)
+    human1 = players.HumanPlayer("Jimmy", 1)
+    human2 = players.HumanPlayer("Also Jimmy", 2)
     randplayer = players.RandomPlayer(2)
-    best_player = players.NegaMaxPlayer(2)
+    # best_player = players.NegaMaxPlayer(2)
 
     mini_player1 = players.MinimaxPlayer(1)
     mini_player2 = players.MinimaxPlayer(2)
 
-    game_board = GameBoard([mini_player1, mini_player2])
+    net_player1 = players.NetPlayer(1, os.path.abspath('../trained_networks/practice.sav'))
+
+    net_player2 = players.NetPlayer(2, os.path.abspath('../trained_networks/practice.sav'))
+
+    game_board = GameBoard([net_player1, human2])
     game_board.game_loop()  # there has to be a better way to do this
+
 
 if __name__ == "__main__":
     main()

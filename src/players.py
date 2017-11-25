@@ -73,6 +73,26 @@ class MinimaxPlayer(Player):
         return return_board
 
 
+class NetPlayer(Player):
+
+    def __init__(self, player, network_path):
+        import pickle
+        super().__init__("Neural Net Player", player)
+        self.network = pickle.load(open(network_path, 'rb'))
+
+    def make_move(self):
+        flat = [[item for sublist in settings.board for item in sublist]]
+        print(flat)
+        pred = self.network.predict(flat)
+        print(pred)
+        return pred
+
+    def test(self):
+        # TEST
+        x = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1]]
+        print(self.network.predict(x))
+
+
 
 class NegaMaxPlayer(Player):
     """
@@ -216,3 +236,10 @@ class NegaMaxPlayer(Player):
 
     def make_move(self):
         return self.negamax(self.player, settings.board)
+
+
+
+import os
+net_player1 = NetPlayer(1, os.path.abspath('../trained_networks/practice.sav'))
+print("TEST")
+net_player1.test()

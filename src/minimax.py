@@ -220,5 +220,3 @@ class Minimax(object):
             total += 1
 
         return total
-
-z
