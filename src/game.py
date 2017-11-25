@@ -34,12 +34,18 @@ class GameBoard:
         self.print_board()
         print("\n")
 
-        #file = open("../data/6v6.txt", "w")
+        file = open("../data/5vR.csv", "a")
 
         while 1:
-            now = time.time()
+            flat = [[item for sublist in settings.board for item in sublist]]
+            str1 = ','.join(str(e) for e in flat)
+            print(str1[1:-1])
 
+            now = time.time()
             play_column = int(self.players[self.turn].make_move())
+            file.write(str1[1:-1] + ", " + str(play_column) + "\n")
+
+
             game_turns.append(play_column)
             winner = self.play_piece(play_column)
 
@@ -49,13 +55,13 @@ class GameBoard:
             self.print_board()
             print("\n")
 
-            #file.write(str(settings.board) + " " + str(play_column) + "\n")
+
 
             if winner > 0:
                 print("Winner is: " + str(winner))
                 print("Number of moves " + str(settings.moves_played))
                 print("Moves: ", game_turns)
-                #file.close()
+                file.close()
                 return winner
             elif winner < 0:
                 print("illegal move, try again")
@@ -198,9 +204,10 @@ def main():
 
     net_player2 = players.NetPlayer(2, os.path.abspath('../trained_networks/practice.sav'))
 
-    game_board = GameBoard([net_player1, human2])
+    game_board = GameBoard([mini_player1, randplayer])
     game_board.game_loop()  # there has to be a better way to do this
 
 
 if __name__ == "__main__":
     main()
+
