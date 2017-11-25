@@ -66,6 +66,11 @@ class GameBoard:
             elif winner < 0:
                 print("illegal move, try again")
             else:
+                settings.moves_played += 1
+
+                if settings.moves_played >= 42:
+                    print("Tied Game!")
+                    return 0
 
                 if self.turn == self.RED:
                     self.turn = self.BLACK
@@ -95,7 +100,6 @@ class GameBoard:
 
             # check for winner
             winner = self.find_winner(col, row)
-            settings.moves_played += 1
 
             return winner
 
@@ -194,17 +198,17 @@ def main():
     print("hello world")
     human1 = players.HumanPlayer("Jimmy", 1)
     human2 = players.HumanPlayer("Also Jimmy", 2)
-    randplayer = players.RandomPlayer(2)
+    rand_player1 = players.RandomPlayer(1)
+    rand_player2 = players.RandomPlayer(2)
     # best_player = players.NegaMaxPlayer(2)
 
     mini_player1 = players.MinimaxPlayer(1)
     mini_player2 = players.MinimaxPlayer(2)
 
     net_player1 = players.NetPlayer(1, os.path.abspath('../trained_networks/practice.sav'))
-
     net_player2 = players.NetPlayer(2, os.path.abspath('../trained_networks/practice.sav'))
 
-    game_board = GameBoard([mini_player1, randplayer])
+    game_board = GameBoard([rand_player1, mini_player2])
     game_board.game_loop()  # there has to be a better way to do this
 
 
