@@ -45,7 +45,7 @@ class MinimaxPlayer(Player):
 
         m = Minimax(changed_board)
 
-        x = m.bestMove(6, changed_board, 'x' if self.player == 1 else 'o')
+        x = m.bestMove(5, changed_board, 'x' if self.player == 1 else 'o')
 
         x = x[0]
 
@@ -82,15 +82,8 @@ class NetPlayer(Player):
 
     def make_move(self):
         flat = [[item for sublist in settings.board for item in sublist]]
-        print(flat)
         pred = self.network.predict(flat)
-        print(pred)
         return pred
-
-    def test(self):
-        # TEST
-        x = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1]]
-        print(self.network.predict(x))
 
 
 
@@ -239,7 +232,3 @@ class NegaMaxPlayer(Player):
 
 
 
-import os
-net_player1 = NetPlayer(1, os.path.abspath('../trained_networks/practice.sav'))
-print("TEST")
-net_player1.test()
