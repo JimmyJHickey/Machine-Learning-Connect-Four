@@ -43,8 +43,9 @@ class GameBoard:
 
             now = time.time()
             play_column = int(self.players[self.turn].make_move())
-            file.write(str1[1:-1] + ", " + str(play_column) + "\n")
 
+            if(self.turn == self.RED):
+                file.write(str1[1:-1] + ", " + str(play_column) + "\n")
 
             game_turns.append(play_column)
             winner = self.play_piece(play_column)
@@ -208,7 +209,7 @@ def main():
     net_player1 = players.NetPlayer(1, os.path.abspath('../trained_networks/practice.sav'))
     net_player2 = players.NetPlayer(2, os.path.abspath('../trained_networks/practice.sav'))
 
-    game_board = GameBoard([rand_player1, mini_player2])
+    game_board = GameBoard([mini_player1, rand_player2])
     game_board.game_loop()  # there has to be a better way to do this
 
 
