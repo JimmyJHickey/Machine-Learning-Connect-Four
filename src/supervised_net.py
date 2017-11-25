@@ -24,12 +24,19 @@ class NeuralNet:
         nn.fit(x, y)
 
         # TEST
-        # x = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1]]
-        # print(nn.predict(x))
+        x = [[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 2, 1]]
+        print(nn.predict(x))
 
         pickle.dump(nn, open(self.out_path, 'wb'))
 
 
-d = pd.read_csv(os.path.abspath('../data/jdata.csv'), header=None)
-myNN = NeuralNet(d, os.path.abspath("../trained_networks/practice.sav"))
-myNN.make_network()
+# d = pd.read_csv(os.path.abspath('../data/jdata.csv'), header=None)
+# myNN = NeuralNet(d, os.path.abspath("../trained_networks/practice.sav"))
+# myNN.make_network()
+import copy
+hm = copy.deepcopy(settings.board)
+settings.board[1][1] = "X"
+print(settings.board)
+print(hm)
+settings.board = copy.deepcopy(hm)
+print(settings.board)
