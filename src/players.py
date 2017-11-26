@@ -37,15 +37,16 @@ class HumanPlayer(Player):
 # https://github.com/erikackermann/Connect-Four
 class MinimaxPlayer(Player):
 
-    def __init__(self, player):
+    def __init__(self, player, depth):
         super().__init__("MinimaxPlayer", player)
+        self.depth = depth
 
     def make_move(self):
         changed_board = self.change_board(settings.board)
 
         m = Minimax(changed_board)
 
-        x = m.bestMove(5, changed_board, 'x' if self.player == 1 else 'o')
+        x = m.bestMove(self.depth, changed_board, 'x' if self.player == 1 else 'o')
 
         x = x[0]
 
@@ -75,10 +76,14 @@ class MinimaxPlayer(Player):
 
 class NetPlayer(Player):
 
-    def __init__(self, player, network_path):
+    difficulty_dict = {"easy": "../trained_networks/4vR.sav",
+                       "medium": "../trained_networks/5vR.sav",
+                       "hard": "../trained_networks/6vR.sav"}
+
+    def __init__(self, player, difficulty):
         import pickle
         super().__init__("Neural Net Player", player)
-        self.network = pickle.load(open(network_path, 'rb'))
+        self.network = pickle.load(open(self.difficulty_dict[difficulty], 'rb'))
 
     def make_move(self):
         flat = [[item for sublist in settings.board for item in sublist]]

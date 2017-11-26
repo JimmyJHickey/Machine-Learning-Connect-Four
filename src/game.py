@@ -203,13 +203,13 @@ def main():
     rand_player2 = players.RandomPlayer(2)
     # best_player = players.NegaMaxPlayer(2)
 
-    mini_player1 = players.MinimaxPlayer(1)
-    mini_player2 = players.MinimaxPlayer(2)
+    mini_player1 = players.MinimaxPlayer(1, 5)
+    mini_player2 = players.MinimaxPlayer(2, 5)
 
-    net_player1 = players.NetPlayer(1, os.path.abspath('../trained_networks/practice.sav'))
-    net_player2 = players.NetPlayer(2, os.path.abspath('../trained_networks/practice.sav'))
+    net_player1 = players.NetPlayer(1, 'medium')
+    net_player2 = players.NetPlayer(2, 'medium')
 
-    game_board = GameBoard([mini_player1, rand_player2])
+    game_board = GameBoard([mini_player1, net_player2])
     game_board.game_loop()  # there has to be a better way to do this
 
 
