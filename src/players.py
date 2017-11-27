@@ -75,10 +75,10 @@ class MinimaxPlayer(Player):
 
 
 class NetPlayer(Player):
-
-    difficulty_dict = {"easy": "../trained_networks/4vR.sav",
-                       "medium": "../trained_networks/5vR.sav",
-                       "hard": "../trained_networks/6vR.sav"}
+    # Absolute paths because Jupyter Notebook gets mad with relative pathing
+    difficulty_dict = {"easy": "/Users/uf4451fa/Documents/Programming/git/Machine-Learning-Connect-Four/trained_networks/practice.sav",
+                       "medium": "/Users/uf4451fa/Documents/Programming/git/Machine-Learning-Connect-Four/trained_networks/practice.sav",
+                       "hard": "/Users/uf4451fa/Documents/Programming/git/Machine-Learning-Connect-Four/trained_networks/practice.sav"}
 
     def __init__(self, player, difficulty):
         import pickle
