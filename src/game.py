@@ -34,18 +34,20 @@ class GameBoard:
         self.print_board()
         print("\n")
 
-        file = open("../data/6vR.csv", "a")
+        #file = open("../data/5vR.csv", "a")
+
 
         while 1:
             flat = [[item for sublist in settings.board for item in sublist]]
             str1 = ','.join(str(e) for e in flat)
-            print(str1[1:-1])
+            # print(str1[1:-1])
 
             now = time.time()
             play_column = int(self.players[self.turn].make_move())
 
-            if(self.turn == self.BLACK):
-                file.write(str1[1:-1] + ", " + str(play_column) + "\n")
+            #if(self.turn == self.RED):
+                #file.write(str1[1:-1] + ", " + str(play_column) + "\n")
+
 
             game_turns.append(play_column)
             winner = self.play_piece(play_column)
@@ -62,7 +64,7 @@ class GameBoard:
                 print("Winner is: " + str(winner))
                 print("Number of moves " + str(settings.moves_played))
                 print("Moves: ", game_turns)
-                file.close()
+                #file.close()
                 return winner
             elif winner < 0:
                 print("illegal move, try again")
@@ -195,6 +197,7 @@ class GameBoard:
         print("Hi -Jimmy")
 
 
+
 def main():
     print("hello world")
     human1 = players.HumanPlayer("Jimmy", 1)
@@ -203,16 +206,49 @@ def main():
     rand_player2 = players.RandomPlayer(2)
     # best_player = players.NegaMaxPlayer(2)
 
-    mini_player1 = players.MinimaxPlayer(1)
-    mini_player2 = players.MinimaxPlayer(2)
+    mini_player1 = players.MinimaxPlayer(1, 6)
+    mini_player2 = players.MinimaxPlayer(2, 6)
 
    # net_player1 = players.NetPlayer(1, os.path.abspath('../trained_networks/practice.sav'))
    # net_player2 = players.NetPlayer(2, os.path.abspath('../trained_networks/practice.sav'))
 
     game_board = GameBoard([rand_player1, mini_player2])
+
     game_board.game_loop()  # there has to be a better way to do this
+
+# def main(in1, in2):
+#     in1 = str(in1)
+#     in2 = str(in2)
+#
+#     p1_dict = {"human": players.HumanPlayer("Human", 1),
+#                "random": players.RandomPlayer(1),
+#                "mini_easy": players.MinimaxPlayer(1, 3),
+#                "mini_medium": players.MinimaxPlayer(1, 5),
+#                "mini_hard": players.MinimaxPlayer(1, 6),
+#                "net_easy": players.NetPlayer(1, "easy"),
+#                "net_medium": players.NetPlayer(1, "medium"),
+#                "net_hard": players.NetPlayer(1, "hard")
+#                }
+#     p2_dict = {"human": players.HumanPlayer("Human", 2),
+#                "random": players.RandomPlayer(2),
+#                "mini_easy": players.MinimaxPlayer(2, 3),
+#                "mini_medium": players.MinimaxPlayer(2, 5),
+#                "mini_hard": players.MinimaxPlayer(2, 6),
+#                "net_easy": players.NetPlayer(2, "easy"),
+#                "net_medium": players.NetPlayer(2, "medium"),
+#                "net_hard": players.NetPlayer(2, "hard")
+#                }
+#
+#     player1 = p1_dict[in1]
+#     player2 = p2_dict[in2]
+#
+#     game_board = GameBoard([player1, player2])
+#
+#     game_board.game_loop()  # there has to be a better way to do this
 
 
 if __name__ == "__main__":
+    import sys
+    #main(sys.argv[1], sys.argv[2])
     main()
 
