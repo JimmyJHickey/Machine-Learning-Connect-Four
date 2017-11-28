@@ -34,7 +34,7 @@ class GameBoard:
         self.print_board()
         print("\n")
 
-        #file = open("../data/5vR.csv", "a")
+        #file = open("../data/RvR.csv", "a")
 
 
         while 1:
@@ -45,8 +45,8 @@ class GameBoard:
             now = time.time()
             play_column = int(self.players[self.turn].make_move())
 
-            #if(self.turn == self.RED):
-                #file.write(str1[1:-1] + ", " + str(play_column) + "\n")
+
+            #file.write(str1[1:-1] + ", " + str(play_column) + "\n")
 
 
             game_turns.append(play_column)
@@ -212,7 +212,7 @@ def main():
    # net_player1 = players.NetPlayer(1, os.path.abspath('../trained_networks/practice.sav'))
    # net_player2 = players.NetPlayer(2, os.path.abspath('../trained_networks/practice.sav'))
 
-    game_board = GameBoard([rand_player1, mini_player2])
+    game_board = GameBoard([rand_player1, rand_player2])
 
     game_board.game_loop()  # there has to be a better way to do this
 
