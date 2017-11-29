@@ -15,6 +15,9 @@ import settings
 import time
 settings.init()
 
+import warnings
+warnings.filterwarnings("ignore")
+
 
 class GameBoard:
 
@@ -61,7 +64,7 @@ class GameBoard:
 
 
             if winner > 0:
-                print("Winner is: " + str(winner))
+                print(self.players[winner].name + " wins!")
                 print("Number of moves " + str(settings.moves_played))
                 print("Moves: ", game_turns)
                 #file.close()
@@ -122,7 +125,7 @@ class GameBoard:
                     break
 
             if counter >= 4:
-                print("!!! winner 0")
+                #print("!!! winner 0")
                 return self.turn
 
             i += 1
@@ -138,7 +141,7 @@ class GameBoard:
                 else:
                     break
             if counter >= 4:
-                print("!!! winner 1")
+                #print("!!! winner 1")
                 return self.turn
 
             i += 1
@@ -156,7 +159,7 @@ class GameBoard:
                 else:
                     break
             if counter >= 4:
-                print("!!! winner 2")
+                #print("!!! winner 2")
                 return self.turn
 
         # check for wins with slope of 1
@@ -172,7 +175,7 @@ class GameBoard:
                 else:
                     break
             if counter >= 4:
-                print("!!! winner 3")
+                #print("!!! winner 3")
                 return self.turn
 
         # return there wasn't a winner this turn
@@ -197,58 +200,58 @@ class GameBoard:
         print("Hi -Jimmy")
 
 
-
-def main():
-    print("hello world")
-    human1 = players.HumanPlayer("Jimmy", 1)
-    human2 = players.HumanPlayer("Also Jimmy", 2)
-    rand_player1 = players.RandomPlayer(1)
-    rand_player2 = players.RandomPlayer(2)
-    # best_player = players.NegaMaxPlayer(2)
-
-    mini_player1 = players.MinimaxPlayer(1, 6)
-    mini_player2 = players.MinimaxPlayer(2, 1)
-
-    net_player1 = players.NetPlayer(1, 'hard')
-    net_player2 = players.NetPlayer(2, 'easy')
-
-    game_board = GameBoard([net_player1, mini_player2])
-
-    game_board.game_loop()  # there has to be a better way to do this
-
-# def main(in1, in2):
-#     in1 = str(in1)
-#     in2 = str(in2)
 #
-#     p1_dict = {"human": players.HumanPlayer("Human", 1),
-#                "random": players.RandomPlayer(1),
-#                "mini_easy": players.MinimaxPlayer(1, 3),
-#                "mini_medium": players.MinimaxPlayer(1, 5),
-#                "mini_hard": players.MinimaxPlayer(1, 6),
-#                "net_easy": players.NetPlayer(1, "easy"),
-#                "net_medium": players.NetPlayer(1, "medium"),
-#                "net_hard": players.NetPlayer(1, "hard")
-#                }
-#     p2_dict = {"human": players.HumanPlayer("Human", 2),
-#                "random": players.RandomPlayer(2),
-#                "mini_easy": players.MinimaxPlayer(2, 3),
-#                "mini_medium": players.MinimaxPlayer(2, 5),
-#                "mini_hard": players.MinimaxPlayer(2, 6),
-#                "net_easy": players.NetPlayer(2, "easy"),
-#                "net_medium": players.NetPlayer(2, "medium"),
-#                "net_hard": players.NetPlayer(2, "hard")
-#                }
+# def main():
+#     print("hello world")
+#     human1 = players.HumanPlayer("Jimmy", 1)
+#     human2 = players.HumanPlayer("Also Jimmy", 2)
+#     rand_player1 = players.RandomPlayer(1)
+#     rand_player2 = players.RandomPlayer(2)
+#     # best_player = players.NegaMaxPlayer(2)
 #
-#     player1 = p1_dict[in1]
-#     player2 = p2_dict[in2]
+#     mini_player1 = players.MinimaxPlayer(1, 6)
+#     mini_player2 = players.MinimaxPlayer(2, 1)
 #
-#     game_board = GameBoard([player1, player2])
+#     net_player1 = players.NetPlayer(1, 'hard')
+#     net_player2 = players.NetPlayer(2, 'easy')
+#
+#     game_board = GameBoard([net_player1, mini_player2])
 #
 #     game_board.game_loop()  # there has to be a better way to do this
+
+def main(in1, in2):
+    in1 = str(in1)
+    in2 = str(in2)
+
+    p1_dict = {"human": players.HumanPlayer("Team Jimmy", 1),
+               "random": players.RandomPlayer(1),
+               "mini_easy": players.MinimaxPlayer(1, 3),
+               "mini_medium": players.MinimaxPlayer(1, 5),
+               "mini_hard": players.MinimaxPlayer(1, 6),
+               "net_random": players.NetPlayer(1, "Random"),
+               "net_easy": players.NetPlayer(1, "Easy"),
+               "net_medium": players.NetPlayer(1, "Medium"),
+               "net_hard": players.NetPlayer(1, "Hard")
+               }
+    p2_dict = {"human": players.HumanPlayer("Team Ben", 2),
+               "random": players.RandomPlayer(2),
+               "mini_easy": players.MinimaxPlayer(2, 3),
+               "mini_medium": players.MinimaxPlayer(2, 5),
+               "mini_hard": players.MinimaxPlayer(2, 6),
+               "net_random": players.NetPlayer(2, "Random"),
+               "net_easy": players.NetPlayer(2, "Easy"),
+               "net_medium": players.NetPlayer(2, "Medium"),
+               "net_hard": players.NetPlayer(2, "Hard")
+               }
+
+    player1 = p1_dict[in1]
+    player2 = p2_dict[in2]
+
+    game_board = GameBoard([player1, player2])
+
+    game_board.game_loop()  # there has to be a better way to do this
 
 
 if __name__ == "__main__":
     import sys
-    #main(sys.argv[1], sys.argv[2])
-    main()
-
+    main(sys.argv[1], sys.argv[2])
