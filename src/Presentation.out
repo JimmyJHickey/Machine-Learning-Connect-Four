@@ -1,0 +1,12 @@
+\BOOKMARK [1][-]{section.1}{Training a Computer to Play Connect 4}{}% 1
+\BOOKMARK [1][-]{section.2}{Connect 4}{}% 2
+\BOOKMARK [1][-]{section.3}{Method}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Data Generation}{section.3}% 4
+\BOOKMARK [1][-]{section.4}{MiniMax}{}% 5
+\BOOKMARK [2][-]{subsection.4.1}{Adding \134alpha-\134beta Pruning to Minimax}{section.4}% 6
+\BOOKMARK [1][-]{section.5}{Minimax with Pruning Example}{}% 7
+\BOOKMARK [1][-]{section.6}{Minimax in Connect 4}{}% 8
+\BOOKMARK [1][-]{section.7}{Machine Learning vs. Minimax}{}% 9
+\BOOKMARK [1][-]{section.8}{Supervised Learning with SKLearn}{}% 10
+\BOOKMARK [2][-]{subsubsection.8.0.1}{Improvements}{section.8}% 11
+\BOOKMARK [1][-]{section.9}{Sources}{}% 12

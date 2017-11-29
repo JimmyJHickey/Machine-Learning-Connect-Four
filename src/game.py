@@ -233,7 +233,11 @@ def main(in1, in2):
                "net_medium": players.NetPlayer(1, "Medium"),
                "net_hard": players.NetPlayer(1, "Hard")
                }
-    p2_dict = {"human": players.HumanPlayer("Team Ben", 2),
+    result = ""
+    h2_name = "second place"
+    for c in h2_name:
+        result = result + c + '\u0336'
+    p2_dict = {"human": players.HumanPlayer("Team " + result+ " Ben", 2),
                "random": players.RandomPlayer(2),
                "mini_easy": players.MinimaxPlayer(2, 3),
                "mini_medium": players.MinimaxPlayer(2, 5),
