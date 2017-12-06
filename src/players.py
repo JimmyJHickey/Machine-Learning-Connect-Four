@@ -75,10 +75,6 @@ class MinimaxPlayer(Player):
 
 
 class NetPlayer(Player):
-    # Absolute paths because Jupyter Notebook gets mad with relative pathing
-    # difficulty_dict = {"easy": "/Users/uf4451fa/Documents/Programming/git/Machine-Learning-Connect-Four/trained_networks/practice.sav",
-    #                    "medium": "/Users/uf4451fa/Documents/Programming/git/Machine-Learning-Connect-Four/trained_networks/practice.sav",
-    #                    "hard": "/Users/uf4451fa/Documents/Programming/git/Machine-Learning-Connect-Four/trained_networks/practice.sav"}
 
     difficulty_dict = {
         "Random": "../trained_networks/RvR.sav",

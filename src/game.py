@@ -6,6 +6,7 @@
 
 # inspired by code from Jared Dupont
 # www.github.com/jrddupont
+# PHYSICS FUN DAY!
 
 # still learning python, will break many many python conventions
 
