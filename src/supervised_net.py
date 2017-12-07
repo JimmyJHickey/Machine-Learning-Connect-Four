@@ -22,7 +22,6 @@ class NeuralNet:
         nn = MLPClassifier(activation="tanh",
                            solver="sgd",
                            hidden_layer_sizes=(10, 10),
-                           alpha=0.0001,
                            learning_rate_init=0.01,
                            learning_rate='constant',
                            max_iter=5000,

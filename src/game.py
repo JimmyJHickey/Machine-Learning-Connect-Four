@@ -238,7 +238,7 @@ def main(in1, in2):
     h2_name = "second place"
     for c in h2_name:
         result = result + c + '\u0336'
-    p2_dict = {"human": players.HumanPlayer("Team " + result+ " Ben", 2),
+    p2_dict = {"human": players.HumanPlayer("Team " + result + " Ben", 2),
                "random": players.RandomPlayer(2),
                "mini_easy": players.MinimaxPlayer(2, 3),
                "mini_medium": players.MinimaxPlayer(2, 5),

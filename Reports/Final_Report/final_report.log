@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.14)  6 DEC 2017 15:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.14)  6 DEC 2017 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -416,36 +416,44 @@ Package: translator 2010/06/12 ver 1.10
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/beamer/translator/translator-lang
 uage-mappings.tex)))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count196
+\float@exts=\toks18
+\float@box=\box49
+\@float@everytoks=\toks19
+\@floatcapt=\box50
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip55
 \enit@outerparindent=\dimen159
-\enit@toks=\toks18
-\enit@inbox=\box49
-\enitdp@description=\count196
+\enit@toks=\toks20
+\enit@inbox=\box51
+\enitdp@description=\count197
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count197
-\lst@gtempboxa=\box50
-\lst@token=\toks19
-\lst@length=\count198
+\lst@mode=\count198
+\lst@gtempboxa=\box52
+\lst@token=\toks21
+\lst@length=\count199
 \lst@currlwidth=\dimen160
-\lst@column=\count199
-\lst@pos=\count266
+\lst@column=\count266
+\lst@pos=\count267
 \lst@lostspace=\dimen161
 \lst@width=\dimen162
-\lst@newlines=\count267
-\lst@lineno=\count268
+\lst@newlines=\count268
+\lst@lineno=\count269
 \lst@maxwidth=\dimen163
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count269
-\lst@skipnumbers=\count270
-\lst@framebox=\box51
+\c@lstnumber=\count270
+\lst@skipnumbers=\count271
+\lst@framebox=\box53
 )
 (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -513,13 +521,13 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
 \@linkdim=\dimen164
-\Hy@linkcounter=\count271
-\Hy@pagecounter=\count272
+\Hy@linkcounter=\count272
+\Hy@pagecounter=\count273
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count273
+\Hy@SavedSpaceFactor=\count274
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -531,7 +539,7 @@ Package hyperref Info: Plain pages OFF on input line 4513.
 Package hyperref Info: Backreferencing OFF on input line 4518.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4751.
-\c@Hy@tempcnt=\count274
+\c@Hy@tempcnt=\count275
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
@@ -539,7 +547,7 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5104.
 \XeTeXLinkMargin=\dimen165
-\Fld@menulength=\count275
+\Fld@menulength=\count276
 \Field@Width=\dimen166
 \Fld@charsize=\dimen167
 Package hyperref Info: Hyper figures OFF on input line 6358.
@@ -551,17 +559,17 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6383.
 Package hyperref Info: PDF/A mode OFF on input line 6388.
 LaTeX Info: Redefining \ref on input line 6428.
 LaTeX Info: Redefining \pageref on input line 6432.
-\Hy@abspage=\count276
-\c@Item=\count277
-\c@Hfootnote=\count278
+\Hy@abspage=\count277
+\c@Item=\count278
+\c@Hfootnote=\count279
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
-\Fld@listcount=\count279
-\c@bookmark@seq@number=\count280
+\Fld@listcount=\count280
+\c@bookmark@seq@number=\count281
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -570,8 +578,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip56
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 31.
+Package hyperref Info: Option `colorlinks' set `true' on input line 33.
 
+(/usr/local/texlive/2017/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
 (/usr/local/texlive/2017/texmf-dist/tex/latex/roboto/roboto.sty
 Package: roboto 2015/09/15 (Bob Tennent) Supports Roboto fonts for all LaTeX en
 gines.
@@ -581,10 +592,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/local/texlive/2017/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks20
-\XKV@tempa@toks=\toks21
+\XKV@toks=\toks22
+\XKV@tempa@toks=\toks23
 )
-\XKV@depth=\count281
+\XKV@depth=\count282
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/textcomp.sty
@@ -712,7 +723,7 @@ File: babel.def 2017/10/04 3.14 Babel common definitions
 (/usr/local/texlive/2017/texmf-dist/tex/generic/babel/switch.def
 File: switch.def 2017/10/04 3.14 Babel switching mechanism
 )
-\babel@savecnt=\count282
+\babel@savecnt=\count283
 \U@D=\dimen168
 )
 \l@canadian = a dialect from \language\l@american 
@@ -721,8 +732,8 @@ File: switch.def 2017/10/04 3.14 Babel switching mechanism
 ))
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks22
-\inpenc@posthook=\toks23
+\inpenc@prehook=\toks24
+\inpenc@posthook=\toks25
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
@@ -1130,35 +1141,35 @@ s
 (./final_report.aux)
 \openout1 = `final_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 54.
-LaTeX Font Info:    ... okay on input line 54.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 54.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 54.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 59.
+LaTeX Font Info:    ... okay on input line 59.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 59.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 59.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 54.
+LaTeX Font Info:    ... okay on input line 59.
 LaTeX Font Info:    Try loading font information for T1+Roboto-LF on input line
- 54.
+ 59.
 
 (/usr/local/texlive/2017/texmf-dist/tex/latex/roboto/T1Roboto-LF.fd
 File: T1Roboto-LF.fd 2015/09/15 (autoinst) Font definitions for T1/Roboto-LF.
 )
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' will be
-(Font)              scaled to size 12.0pt on input line 54.
+(Font)              scaled to size 12.0pt on input line 59.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1196,17 +1207,17 @@ LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' will be
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count283
+\scratchcounter=\count284
 \scratchdimen=\dimen169
-\scratchbox=\box52
-\nofMPsegments=\count284
-\nofMParguments=\count285
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count286
+\scratchbox=\box54
+\nofMPsegments=\count285
+\nofMParguments=\count286
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count287
 \MPscratchDim=\dimen170
-\MPnumerator=\count287
-\makeMPintoPDFobject=\count288
-\everyMPtoPDFconversion=\toks25
+\MPnumerator=\count288
+\makeMPintoPDFobject=\count289
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -1231,47 +1242,49 @@ Dictionary: translator-basic-dictionary, Language: English
 (/usr/local/texlive/2017/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
 File: siunitx-abbreviations.cfg 2017/08/02 v2.7j siunitx: Abbreviated units
 )
-\c@lstlisting=\count289
-\AtBeginShipoutBox=\box53
-Package hyperref Info: Link coloring ON on input line 54.
+\c@lstlisting=\count290
+\AtBeginShipoutBox=\box55
+Package hyperref Info: Link coloring ON on input line 59.
  (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count290
+\c@section@level=\count291
 )
-LaTeX Info: Redefining \ref on input line 54.
-LaTeX Info: Redefining \pageref on input line 54.
-LaTeX Info: Redefining \nameref on input line 54.
+LaTeX Info: Redefining \ref on input line 59.
+LaTeX Info: Redefining \pageref on input line 59.
+LaTeX Info: Redefining \nameref on input line 59.
 
 (./final_report.out) (./final_report.out)
 \@outlinefile=\write3
 \openout3 = `final_report.out'.
 
-\c@mv@tabular=\count291
-\c@mv@boldtabular=\count292
-\c__siunitx_mathsf_int=\count293
+\c@mv@tabular=\count292
+\c@mv@boldtabular=\count293
+\c__siunitx_mathsf_int=\count294
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 54.
+(Font)              <12> on input line 59.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 54.
+(Font)              <8> on input line 59.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 54.
-\c__siunitx_mathtt_int=\count294
+(Font)              <6> on input line 59.
+\c__siunitx_mathtt_int=\count295
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' will be
-(Font)              scaled to size 20.74pt on input line 56.
+(Font)              scaled to size 20.74pt on input line 61.
+LaTeX Font Info:    Font shape `T1/Roboto-LF/m/it' will be
+(Font)              scaled to size 20.74pt on input line 61.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' will be
-(Font)              scaled to size 14.4pt on input line 56.
+(Font)              scaled to size 14.4pt on input line 61.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14.4> on input line 56.
+(Font)              <14.4> on input line 61.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 56.
+(Font)              <7> on input line 61.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/m/n' will be
-(Font)              scaled to size 17.28pt on input line 56.
+(Font)              scaled to size 17.28pt on input line 61.
 LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' will be
-(Font)              scaled to size 17.28pt on input line 56.
+(Font)              scaled to size 17.28pt on input line 61.
  (./final_report.toc
 LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' will be
 (Font)              scaled to size 12.0pt on input line 2.
@@ -1282,10 +1295,6 @@ LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' will be
  [1
 
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' will be
-(Font)              scaled to size 14.4pt on input line 73.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 93.
-
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
@@ -1294,39 +1303,113 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2
 
-] [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 93.
+]
+LaTeX Font Info:    Font shape `T1/Roboto-LF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 93.
+ [3] [4]
+<img/alpha-beta.png, id=136, 1148.29pt x 634.37pt>
+File: img/alpha-beta.png Graphic file (type png)
+<use img/alpha-beta.png>
+Package pdftex.def Info: img/alpha-beta.png  used on input line 113. on input l
+ine 113.
+Package pdftex.def Info: Requested size: 401.90752pt x 222.03282pt on input lin
+e 113.
+ [5 <./img/alpha-beta.png>]
+<img/rep_board.png, id=145, 755.82375pt x 185.69376pt>
+File: img/rep_board.png Graphic file (type png)
+<use img/rep_board.png>
+Package pdftex.def Info: img/rep_board.png  used on input line 127. on input li
+ne 127.
+Package pdftex.def Info: Requested size: 453.49774pt x 111.4171pt on input line
+ 127.
+<img/print_board.png, id=146, 699.61375pt x 155.58125pt>
+File: img/print_board.png Graphic file (type png)
+<use img/print_board.png>
+Package pdftex.def Info: img/print_board.png  used on input line 132. on input 
+line 132.
+Package pdftex.def Info: Requested size: 419.77148pt x 93.34946pt on input line
+ 132.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 141.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/psnfss/t1pcr.fd
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [6 <./img/rep_board.png (PNG copy)> <./img/print_board.png (PNG copy)>]
+Overfull \hbox (3.94798pt too wide) detected at line 146
+\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cm
+r/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/1
+2 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML
+/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/
+it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ;
+ \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/c
+mr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/
+12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OM
+L/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m
+/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 
+; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/
+cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n
+/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\O
+ML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/
+m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12
+ ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1
+/cmr/m/n/12 2\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/
+n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 0\
+OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 1\OML/cmm/m/it/12 ; \OT1/cmr/m/n/12 2\OML/cmm
+/m/it/12 ; \OT1/cmr/m/n/12 2
+ []
+
+[7] (/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+LaTeX Font Info:    Try loading font information for TS1+Roboto-LF on input lin
+e 179.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/roboto/TS1Roboto-LF.fd
+File: TS1Roboto-LF.fd 2015/09/15 (autoinst) Font definitions for TS1/Roboto-LF.
+
+)
+LaTeX Font Info:    Font shape `TS1/Roboto-LF/m/n' will be
+(Font)              scaled to size 12.0pt on input line 179.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 179.
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 179.
+ [8]
+[9] [10] [11] [12] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
  (./final_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 93.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 93.
-
-
-Package rerunfilecheck Warning: File `final_report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `final_report.out':
-(rerunfilecheck)             Before: E31839C9708FE4EF80CA4DB054695E54;774
-(rerunfilecheck)             After:  AE65A13BA051F66CDBA0725805FB09AF;839.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 93.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
+Package rerunfilecheck Info: File `final_report.out' has not changed.
+(rerunfilecheck)             Checksum: 892E586C8A1E9FCC9D0D8EC6FD3DBBCE;1042.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
  ) 
 Here is how much of TeX's memory you used:
- 19652 strings out of 492990
- 370572 string characters out of 6132635
- 423443 words of memory out of 5000000
- 23003 multiletter control sequences out of 15000+600000
- 573626 words of font info for 60 fonts, out of 8000000 for 9000
+ 20348 strings out of 492990
+ 378619 string characters out of 6132635
+ 451531 words of memory out of 5000000
+ 23631 multiletter control sequences out of 15000+600000
+ 581462 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 32i,11n,43p,10363b,753s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
-{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/roboto/rbto_idpkzy.enc}</us
-r/local/texlive/2017/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb></usr
-/local/texlive/2017/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></u
-sr/local/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on final_report.pdf (3 pages, 57861 bytes).
+ 35i,12n,74p,10363b,1436s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
+exlive/2017/texmf-dist/fonts/enc/dvips/roboto/rbto_bergpl.enc}{/usr/local/texli
+ve/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/local/texlive
+/2017/texmf-dist/fonts/enc/dvips/roboto/rbto_idpkzy.enc}</usr/local/texlive/201
+7/texmf-dist/fonts/type1/google/roboto/Roboto-Bold.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/google/roboto/Roboto-Italic.pfb></usr/local/texlive/201
+7/texmf-dist/fonts/type1/google/roboto/Roboto-Regular.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2017/texmf-dist
+/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on final_report.pdf (14 pages, 196376 bytes).
 PDF statistics:
- 127 PDF objects out of 1000 (max. 8388607)
- 117 compressed objects within 2 object streams
- 20 named destinations out of 1000 (max. 500000)
- 113 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 259 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
+ 56 named destinations out of 1000 (max. 500000)
+ 152 words of extra memory for PDF output out of 10000 (max. 10000000)
 
