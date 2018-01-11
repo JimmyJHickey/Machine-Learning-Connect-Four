@@ -1,7 +1,7 @@
-\documentclass[]{article}
+\documentclass[12pt]{article}
 
 % Margins
-\usepackage[letterpaper, top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage[letterpaper, top=1in, bottom=1in, left=0.75in, right=0.75in]{geometry}
 
 % For prettier tables
 \usepackage{array}
@@ -30,21 +30,29 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fancyhdr}
 
-% Make Header
-\pagestyle{fancy}
-\rhead{Jimmy Hickey}
-\lhead{CS 405}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{setspace}
 
 % Page numbers
 \pagenumbering{arabic}
 
 % Title
-\title{Computers \textit{Attempting} to Kick Human Butt at Connect 4}
+\title{Computers Playing Connect Four at Any Skill Level}
 \author{Ben Andrews \& Jimmy Hickey}
 
 \begin{document}
 	\maketitle
+		\doublespacing
 \begin{abstract}
-	Connect 4 is a two player, adversarial game in which the players take turns placing pieces on a board; the first player to connect four pieces in a line wins. Artificial intelligence scholars became interested in this game and it has since been mathematically solved, that is there is always a definite correct move. For a user, however, playing against a machine that always makes the perfect move does not create a meaningful experience. Thus, there is a need for a computer player that is good, but not perfect. Through supervised learning algorithms, a machine can be taught to play this game well, but with some inherent flaws due to the stochastic nature of supervised learning. Applying these methods introduces a procedure to generate computer players that can compete at different skill levels, offering an enjoyable experience to any human player.
+
+	Connect 4 is a two player, adversarial game in which the players take turns placing pieces on a board; the first player to connect four pieces in a line wins. It has since been mathematically solved, that is there is always a definite correct move. For a user, however, playing against a machine that always makes the perfect move does not create a meaningful experience. Thus, there is a need for a computer player that is good, but not perfect. 
+	
+	We have implemented a minimax algorithm to provide this service. It can be adjusted to make better or worse decisions; however this process takes a lot of time. Each move can take minutes to make for higher level minimax players. This is wait is unaccpetable for any user, so instead we generated data using the minimax algorithm and used to train a machine learning network.
+Through supervised learning algorithms, a machine can be taught to play this game well, but with some inherent flaws due to the stochastic nature of supervised learning. Applying these methods introduces a procedure to generate computer players that can compete at different skill levels with quick response times, offering an enjoyable experience to any user.
 \end{abstract}
+The codebase and instructions to play against our machine can be found here: \\
+\faGithub \ \  \href{https://github.com/JimmyJHickey/Machine-Learning-Connect-Four}{https://github.com/JimmyJHickey/Machine-Learning-Connect-Four}
+
+
 \end{document}
