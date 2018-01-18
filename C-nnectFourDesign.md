@@ -28,13 +28,15 @@ GameLoop
 
 		rotate turn or end game
 
-GameLogic
+GameBoard
 
-	/* Checks for valid moves, and checks to see if the game has ended */
+		/* Holds and operates on the gameboard */
 
-	makeMove(board, position, player)
+		gameboard[7][6]
 
-	checkWinner(board, position, player)
+		playPiece(column, player)
+
+		checkWinner(position, player)
 
 
 Abstract Player
@@ -42,7 +44,7 @@ Abstract Player
 	/* Empty shell for the different kinds of players */
 
 	makeMove()
-	
+
 
 HumanPlayer -> Player
 
@@ -54,7 +56,7 @@ HumanPlayer -> Player
 
 		return input
 
-	
+
 MinimaxPlayer -> Player
 
 	/* A player that makes moves with a minimax algorithm */
@@ -65,7 +67,7 @@ MinimaxPlayer -> Player
 
 		return move
 
-	
+
 NeuralPlayer -> Player
 
 	/* A player that makes moves using a trained neural network */
@@ -75,3 +77,12 @@ NeuralPlayer -> Player
 		runBoard through neural network
 
 		return move
+
+
+constants.h
+	#define PLAYER_ONE 0
+	#define PLAYER_TWO 1
+	#define BLANK_SPACE -1
+
+	#define COLUMNS 6
+	#define ROWS 7
