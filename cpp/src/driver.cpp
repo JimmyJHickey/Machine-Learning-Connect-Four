@@ -41,7 +41,9 @@ int main(int argc, char *argv[])
 		if(position.row != -1)
 		{
 			// cycle turn
+			gb.checkWinner(&position, turn);
 			turn = (++turn, turn % 2);
+
 		}
 		else
 		{

@@ -16,7 +16,7 @@ class GameBoard
 public:
     GameBoard();
     int playPiece(int player, Position *pos);
-    int checkWinner(Position pos, int player);
+    int checkWinner(Position *pos, int player);
     void printBoard(void);
 
 private:

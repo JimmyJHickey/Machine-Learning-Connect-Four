@@ -18,6 +18,12 @@
 #define INVALID_COLUMN -1
 #define COLUMN_FULL -2
 
+#define NOT_WIN 0
+#define HORZ_WIN 1
+#define VERT_WIN 2
+#define POS_DIAG_WIN 3
+#define NEG_DIAG_WIN 4
+
 struct Position
 {
     int col;
