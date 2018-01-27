@@ -21,7 +21,7 @@ public:
 	 * The player is not responsible if it makes an illegal move, but should return that status of
 	 *  game_board.playPiece to the caller.
 	 */
-	virtual int makeMove(GameBoard &game_board) = 0;
+	virtual int makeMove(GameBoard &game_board, Position *pos) = 0;
 
 protected:
 	const char *player_name;

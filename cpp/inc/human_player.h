@@ -13,5 +13,5 @@ class HumanPlayer: public Player
 {
 public:
 	HumanPlayer(const char *player_name, int player_num);
-	int makeMove(GameBoard &game_board);
+	int makeMove(GameBoard &game_board, Position *Pos);
 };

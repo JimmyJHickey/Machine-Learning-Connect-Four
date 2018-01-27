@@ -14,8 +14,9 @@
 #define COLUMNS 7
 #define ROWS 6
 
-#define COLUMN_FULL 1
+
 #define INVALID_COLUMN -1
+#define COLUMN_FULL -2
 
 struct Position
 {

@@ -29,19 +29,21 @@ GameBoard::GameBoard(void)
  * Returns: the row the piece was played in, or a negative number
  *          indicating error
  */
-int GameBoard::playPiece(int column, int player)
+int GameBoard::playPiece(int player, Position *pos)
 {
 	printf("attempting to play piece...");
 
-	if(column < 0 || column > 6)
+	if(pos->col < 0 || pos->col > 6)
 	{
 	    fprintf(stderr, "Invalid column\n");
+		pos->row = -1
 	    return INVALID_COLUMN;
 	}
 
-	if(board[column][ROWS -1] != BLANK_SPACE)
+	if(board[pos->col][ROWS -1] != BLANK_SPACE)
 	{
 	    fprintf(stderr, "Column is full\n");
+		pos->row = -1;
 	    return COLUMN_FULL;
 	}
 
@@ -49,15 +51,16 @@ int GameBoard::playPiece(int column, int player)
 	int i;
 	for(i = 0; i < ROWS; ++i)
 	{
-	    if(board[column][i] == BLANK_SPACE)
+	    if(board[pos->col][i] == BLANK_SPACE)
 	    {
 	        printf("piece played\n");
-	        board[column][i] = player;
+	        board[pos->col][i] = player;
+		    pos->row = i;
 	        break;
 	    }
 	}
 
-	return i;
+	return 0;
 }
 
 int GameBoard::checkWinner(Position pos, int player)

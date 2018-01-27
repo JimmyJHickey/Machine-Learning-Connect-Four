@@ -15,7 +15,7 @@ class GameBoard
 {
 public:
     GameBoard();
-    int playPiece(int column, int player);
+    int playPiece(int player, Position *pos);
     int checkWinner(Position pos, int player);
     void printBoard(void);
 

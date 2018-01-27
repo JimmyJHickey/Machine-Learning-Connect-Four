@@ -30,9 +30,13 @@ int main(int argc, char *argv[])
 	gb.printBoard();
 
 	int turn = PLAYER_ONE;
+	Position position;
 	for(;;)
 	{
-		players[turn]->makeMove(gb);
+		position.col = -1;
+		position.row = -1;
+
+		players[turn]->makeMove(gb, &position);
 		gb.printBoard();
 
 		// cycle turn
