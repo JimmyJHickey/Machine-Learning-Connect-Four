@@ -10,7 +10,7 @@ INC=./inc/
 BIN=./bin/
 SRC=./src/
 
-SRCS=$(SRC)driver.cpp $(SRC)game_board.cpp
+SRCS=$(SRC)driver.cpp $(SRC)game_board.cpp $(SRC)player.cpp $(SRC)human_player.cpp
 OBJS=$(subst .cpp,.o,$(SRCS))
 
 all: CnnectFour
@@ -21,6 +21,10 @@ CnnectFour: $(OBJS)
 driver.o: $(SRC)driver.cpp $(INC)constants.h
 
 game_board.o: $(SRC)gameboard.cpp $(INC)gameboard.h
+
+human_player.o: $(SRC)human_player.cpp $(INC)human_player.h
+
+player.o: $(INC)player.cpp $(INC)player.h
     
 clean: 
 	cd ./bin && $(RM) *

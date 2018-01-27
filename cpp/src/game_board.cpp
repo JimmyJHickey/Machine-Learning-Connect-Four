@@ -11,15 +11,15 @@ GameBoard::GameBoard(void)
 {
     printf("making gameboard\n");
 
-    // initilize the game board to blank spaces
-    // [0][0] is bottom left
-    for(int i = 0; i < COLUMNS; ++i)
-    {
-        for(int j = 0; j < ROWS; ++j)
-        {
-            board[i][j] = BLANK_SPACE;
-        }
-    } // end outer for -- i
+	// initilize the game board to blank spaces
+	// [0][0] is bottom left
+	for(int i = 0; i < COLUMNS; ++i)
+	{
+	    for(int j = 0; j < ROWS; ++j)
+	    {
+	        board[i][j] = BLANK_SPACE;
+	    }
+	} // end outer for -- i
 }
 
 /*
@@ -29,52 +29,53 @@ GameBoard::GameBoard(void)
  */
 int GameBoard::playPiece(int column, int player)
 {
-    printf("attempting to play piece\n");
+	printf("attempting to play piece...");
 
-    if(column < 0 || column > 6)
-    {
-        fprintf(stderr, "Invalid column\n");
-        return INVALID_COLUMN;
-    }
+	if(column < 0 || column > 6)
+	{
+	    fprintf(stderr, "Invalid column\n");
+	    return INVALID_COLUMN;
+	}
 
-    if(board[column][ROWS -1] != BLANK_SPACE)
-    {
-        fprintf(stderr, "Column is full\n");
-        return COLUMN_FULL;
-    }
+	if(board[column][ROWS -1] != BLANK_SPACE)
+	{
+	    fprintf(stderr, "Column is full\n");
+	    return COLUMN_FULL;
+	}
 
-    // find first blank space in column, play the piece
-    int i;
-    for(i = 0; i < ROWS; ++i)
-    {
-        if(board[column][i] == BLANK_SPACE)
-        {
-            board[column][i] = player;
-            break;
-        }
-    }
+	// find first blank space in column, play the piece
+	int i;
+	for(i = 0; i < ROWS; ++i)
+	{
+	    if(board[column][i] == BLANK_SPACE)
+	    {
+	        printf("piece player\n");
+	        board[column][i] = player;
+	        break;
+	    }
+	}
 
-    return i;
+	return i;
 }
 
 int GameBoard::checkWinner(Position pos, int player)
 {
-    return 0;
+	return 0;
 }
 
 void GameBoard::printBoard(void)
 {
-    for(int i = ROWS -1; i >= 0; --i)
-    {
-        for(int j = 0; j < COLUMNS; ++j)
-        {
-            printf("%c ", board[j][i] == BLANK_SPACE ? '-' :
-                            (board[j][i] == PLAYER_ONE ? 'X' : 'O') );
+	for(int i = ROWS -1; i >= 0; --i)
+	{
+	    for(int j = 0; j < COLUMNS; ++j)
+	    {
+	        printf("%c ", board[j][i] == BLANK_SPACE ? '-' :
+	                        (board[j][i] == PLAYER_ONE ? 'X' : 'O') );
 
-            //printf("%2d ", board[j][i]);
-        }
-        printf("\n");
-    }
+	        //printf("%2d ", board[j][i]);
+	    }
+    printf("\n");
+	}
 
-    printf("0 1 2 3 4 5 6\n");
+	printf("0 1 2 3 4 5 6\n");
 }
