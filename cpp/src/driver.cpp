@@ -37,10 +37,19 @@ int main(int argc, char *argv[])
 		position.row = -1;
 
 		players[turn]->makeMove(gb, &position);
+
+		if(position.row != -1)
+		{
+			// cycle turn
+			turn = (++turn, turn % 2);
+		}
+		else
+		{
+			printf("invalid move, try again\n");
+		}
+
 		gb.printBoard();
 
-		// cycle turn
-		turn = (++turn, turn % 2);
 	}
 
 }

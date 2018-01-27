@@ -32,17 +32,20 @@ GameBoard::GameBoard(void)
 int GameBoard::playPiece(int player, Position *pos)
 {
 	printf("attempting to play piece...");
+	fflush(stdout);
 
 	if(pos->col < 0 || pos->col > 6)
 	{
-	    fprintf(stderr, "Invalid column\n");
-		pos->row = -1
+	    printf("invalid column...");
+		fflush(stdout);
+		pos->row = -1;
 	    return INVALID_COLUMN;
 	}
 
 	if(board[pos->col][ROWS -1] != BLANK_SPACE)
 	{
-	    fprintf(stderr, "Column is full\n");
+	    printf("column is full...");
+		fflush(stdout);
 		pos->row = -1;
 	    return COLUMN_FULL;
 	}
@@ -82,5 +85,5 @@ void GameBoard::printBoard(void)
     printf("\n");
 	}
 
-	printf("0 1 2 3 4 5 6\n");
+	printf("0 1 2 3 4 5 6\n\n");
 }
