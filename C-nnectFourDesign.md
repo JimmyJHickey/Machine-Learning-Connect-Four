@@ -32,25 +32,27 @@ GameBoard
 
 		/* Holds and operates on the gameboard */
 
-		gameboard[7][6]
+		gameboard[COLUMNS][ROWS]
 
-		playPiece(column, player)
+		playPiece(player, *pos)
 
-		checkWinner(position, player)
+		checkWinner(*position, player)
+		
+		printBoard(void)
 
 
 Abstract Player
 
 	/* Empty shell for the different kinds of players */
 
-	makeMove()
+	makeMove(&GameBoard, *Pos)
 
 
 HumanPlayer -> Player
 
 	/* A player that takes human input to make moves */
 
-	makeMove(board)
+	makeMove(&GameBoard, *Pos)
 
 		Prompt human
 
@@ -61,7 +63,7 @@ MinimaxPlayer -> Player
 
 	/* A player that makes moves with a minimax algorithm */
 
-	makeMove()
+	makeMove(&GameBoard, *Pos)
 
 		run minimax to set depth
 
@@ -72,7 +74,7 @@ NeuralPlayer -> Player
 
 	/* A player that makes moves using a trained neural network */
 
-	makeMove()
+	makeMove(&GameBoard, *Pos)
 
 		runBoard through neural network
 
@@ -87,3 +89,18 @@ constants.h
 
 	#define COLUMNS 6
 	#define ROWS 7
+	
+	#define INVALID_COLUMN -1
+    #define COLUMN_FULL -2
+    
+    #define NOT_WIN 0
+    #define HORZ_WIN 1
+    #define VERT_WIN 2
+    #define POS_DIAG_WIN 3
+    #define NEG_DIAG_WIN 4
+    
+    struct Position
+    {
+        int col;
+        int row;
+    };
