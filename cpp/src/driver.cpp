@@ -20,17 +20,23 @@ int main(int argc, char *argv[])
 {
 	printf("Hello World\n");
 
-	HumanPlayer player1("Jimmy", PLAYER_ONE);
+	Player *players[2];
+
+	// create two players on the heap
+	players[PLAYER_ONE] = new HumanPlayer("Jimmy", PLAYER_ONE);
+	players[PLAYER_TWO] = new HumanPlayer("Ben", PLAYER_TWO);
 
 	GameBoard gb;
 	gb.printBoard();
 
-	gb.playPiece(3, PLAYER_ONE);
-	gb.printBoard();
+	int turn = PLAYER_ONE;
+	for(;;)
+	{
+		players[turn]->makeMove(gb);
+		gb.printBoard();
 
-	gb.playPiece(3, PLAYER_TWO);
-	gb.printBoard();
+		// cycle turn
+		turn = (++turn, turn % 2);
+	}
 
-	gb.playPiece(6, PLAYER_ONE);
-	gb.printBoard();
 }

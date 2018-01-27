@@ -51,7 +51,7 @@ int GameBoard::playPiece(int column, int player)
 	{
 	    if(board[column][i] == BLANK_SPACE)
 	    {
-	        printf("piece player\n");
+	        printf("piece played\n");
 	        board[column][i] = player;
 	        break;
 	    }

@@ -19,5 +19,10 @@ HumanPlayer::HumanPlayer(const char *player_name, int player_num)
 
 int HumanPlayer::makeMove(GameBoard &game_board)
 {
-	return 0;
+	printf("Enter a column number to play a piece: \n");
+
+	int col;
+	scanf("%d", &col);
+
+	return game_board.playPiece(col, player_number);;
 }

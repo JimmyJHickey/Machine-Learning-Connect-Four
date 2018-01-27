@@ -6,6 +6,6 @@
 
 Player::Player(const char *player_name, int player_num)
 {
-	name = player_name;
-	number = player_num;
+	this->player_name = player_name;
+	this->player_number = player_num;
 }

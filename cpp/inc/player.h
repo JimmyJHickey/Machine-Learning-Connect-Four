@@ -15,9 +15,15 @@ class Player
 {
 public:
 	Player(const char *player_name, int player_num);
+
+	/*
+	 * makeMove will allow each type of player to make a move the way they wish.
+	 * The player is not responsible if it makes an illegal move, but should return that status of
+	 *  game_board.playPiece to the caller.
+	 */
 	virtual int makeMove(GameBoard &game_board) = 0;
 
 protected:
-	const char *name;
-	int number;
+	const char *player_name;
+	int player_number;
 };
