@@ -7,11 +7,15 @@
 
 #endif //MACHINE_LEARNING_CONNECT_FOUR_PLAYER_H
 
+#ifndef MACHINE_LEARNING_CONNECT_FOUR_GAME_BOARD_H
+#include "game_board.h"
+#endif
+
 class Player
 {
 public:
 	Player(const char *player_name, int player_num);
-	virtual int makeMove(int column) = 0;
+	virtual int makeMove(GameBoard &game_board) = 0;
 
 protected:
 	const char *name;

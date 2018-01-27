@@ -7,6 +7,10 @@
 
 #endif //MACHINE_LEARNING_CONNECT_FOUR_GAME_BOARD_H
 
+#ifndef MACHINE_LEARNING_CONNECT_FOUR_CONSTANTS_H
+#include "constants.h"
+#endif
+
 class GameBoard
 {
 public:

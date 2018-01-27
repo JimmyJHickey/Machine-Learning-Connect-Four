@@ -3,8 +3,10 @@
 // 2018-1-26
 
 #include <stdio.h>
-#include "constants.h"
+
+#ifndef MACHINE_LEARNING_CONNECT_FOUR_GAME_BOARD_H
 #include "game_board.h"
+#endif
 
 
 GameBoard::GameBoard(void)

@@ -3,9 +3,18 @@
 // 2018-1-26
 
 #include <stdio.h>
+
+#ifndef MACHINE_LEARNING_CONNECT_FOUR_CONSTANTS_H
 #include "constants.h"
+#endif
+
+#ifndef MACHINE_LEARNING_CONNECT_FOUR_GAME_BOARD_H
 #include "game_board.h"
+#endif
+
+#ifndef MACHINE_LEARNING_CONNECT_FOUR_HUMAN_PLAYER_H
 #include "human_player.h"
+#endif
 
 int main(int argc, char *argv[])
 {
