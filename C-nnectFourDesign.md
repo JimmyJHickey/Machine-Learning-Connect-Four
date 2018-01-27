@@ -80,6 +80,7 @@ NeuralPlayer -> Player
 
 
 constants.h
+
 	#define PLAYER_ONE 0
 	#define PLAYER_TWO 1
 	#define BLANK_SPACE -1
