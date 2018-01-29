@@ -10,12 +10,14 @@ INC=./inc/
 BIN=./bin/
 SRC=./src/
 
+
 SRCS=$(SRC)driver.cpp $(SRC)game_board.cpp $(SRC)player.cpp $(SRC)human_player.cpp
 OBJS=$(subst .cpp,.o,$(SRCS))
 
 all: CnnectFour
 
 CnnectFour: $(OBJS)
+	mkdir $(BIN)
 	$(CXX) $(CPPFLAGS) -o $(BIN)CnnectFour $(OBJS)
 	
 driver.o: $(SRC)driver.cpp $(INC)constants.h
@@ -26,6 +28,7 @@ human_player.o: $(SRC)human_player.cpp $(INC)human_player.h
 
 player.o: $(INC)player.cpp $(INC)player.h
     
-clean: 
-	cd ./bin && $(RM) *
-	cd ./src && $(RM) *.o
+clean:
+	cd ./$(BIN) && $(RM) *
+	cd ./$(SRC) && $(RM) *.o
+	$(RM) ./$(BIN)

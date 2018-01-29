@@ -26,6 +26,6 @@
 
 struct Position
 {
-    int col;
-    int row;
+	int col;
+	int row;
 };
