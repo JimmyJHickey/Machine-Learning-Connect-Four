@@ -55,7 +55,7 @@ int MinimaxPlayer::evaluateBoard(gameboard *board)
 		printf("\n");
 	}
 
-	printf("0 1 2 3 4 5 6\n\n");
+	printf("0 1 2 3 4 5 6\n");
 
 	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
 	// this should be replaced by a debug helper method
