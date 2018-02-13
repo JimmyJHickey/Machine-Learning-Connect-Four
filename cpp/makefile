@@ -1,6 +1,8 @@
 CC=gcc
 CXX=g++
 RM=rm -f
+RMR=rm -rf
+MKDIR=mkdir -p
 CPPFLAGS=-I./inc/
 #CPPFLAGS=-g $(shell root-config --cflags)
 #LDFLAGS=-g $(shell root-config --ldflags)
@@ -17,7 +19,7 @@ OBJS=$(subst .cpp,.o,$(SRCS))
 all: CnnectFour
 
 CnnectFour: $(OBJS)
-	mkdir $(BIN)
+	$(MKDIR) $(BIN)
 	$(CXX) $(CPPFLAGS) -o $(BIN)CnnectFour $(OBJS)
 	
 driver.o: $(SRC)driver.cpp $(INC)constants.h
@@ -33,4 +35,4 @@ player.o: $(INC)player.cpp $(INC)player.h
 clean:
 	cd ./$(BIN) && $(RM) *
 	cd ./$(SRC) && $(RM) *.o
-	$(RM) ./$(BIN)
+	$(RMR) ./$(BIN)
