@@ -17,9 +17,10 @@ public:
     GameBoard();
     int playPiece(int player, Position *pos);
     int checkWinner(Position *pos, int player);
+	gameboard *boardDup(void);
     void printBoard(void);
 
 private:
-    int board[COLUMNS][ROWS];
+    gameboard board;
 
 };

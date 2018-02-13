@@ -3,6 +3,8 @@
 // 2018-1-26
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h> // memcpy
 
 #ifndef MACHINE_LEARNING_CONNECT_FOUR_GAME_BOARD_H
 #include "game_board.h"
@@ -189,6 +191,25 @@ int GameBoard::checkWinner(Position *pos, int player)
 
 	return return_value;
 }
+
+/*
+ * Returns a pointer to a duplicate gameboard
+ * ### This memory must be freed at some point ###
+ */
+gameboard *GameBoard::boardDup(void)
+{
+	printf("Duplicating board\n");
+
+	printf("mallocing board\n");
+	gameboard *rboard = (gameboard *)malloc(sizeof(gameboard));
+
+	printf("copying board\n");
+	memcpy(rboard, board, sizeof(gameboard));
+
+	printf("returning\n");
+	return rboard;
+}
+
 
 void GameBoard::printBoard(void)
 {

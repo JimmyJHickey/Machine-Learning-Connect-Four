@@ -7,11 +7,13 @@
 
 #endif //MACHINE_LEARNING_CONNECT_FOUR_HUMAN_PLAYER_H
 
+#ifndef MACHINE_LEARNING_CONNECT_FOUR_PLAYER_H
 #include "player.h"
+#endif
 
 class HumanPlayer: public Player
 {
 public:
 	HumanPlayer(const char *player_name, int player_num);
-	int makeMove(GameBoard &game_board, Position *Pos);
+	int makeMove(GameBoard &game_board, Position *pos);
 };

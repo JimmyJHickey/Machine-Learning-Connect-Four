@@ -16,6 +16,10 @@
 #include "human_player.h"
 #endif
 
+#ifndef MACHINE_LEARNING_CONNECT_FOUR_MINIMAX_PLAYER_H
+#include "minimax_player.h"
+#endif
+
 int main(int argc, char *argv[])
 {
 	printf("Hello World\n");
@@ -24,7 +28,8 @@ int main(int argc, char *argv[])
 
 	// create two players on the heap
 	players[PLAYER_ONE] = new HumanPlayer("Jimmy", PLAYER_ONE);
-	players[PLAYER_TWO] = new HumanPlayer("Ben", PLAYER_TWO);
+	//players[PLAYER_TWO] = new HumanPlayer("Ben", PLAYER_TWO);
+	players[PLAYER_TWO] = new MinimaxPlayer("Mini", PLAYER_TWO, 1);
 
 	GameBoard gb;
 	gb.printBoard();
@@ -43,7 +48,6 @@ int main(int argc, char *argv[])
 			// cycle turn
 			gb.checkWinner(&position, turn);
 			turn = (++turn, turn % 2);
-
 		}
 		else
 		{
