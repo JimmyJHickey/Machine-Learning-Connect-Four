@@ -21,5 +21,6 @@ private:
 	int depth;
 	int minimax(gameboard *board, int depth);
 	int evaluateBoard(gameboard *board);
+	void printBoard(gameboard *board);
 };
 

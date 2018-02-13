@@ -42,24 +42,51 @@ int MinimaxPlayer::evaluateBoard(gameboard *board)
 	printf("Evaluating board\n");
 
 
-	// just printing the board for concept
-	printf("~~~ The duplicate board ~~~\n");
-
-	for(int i = ROWS -1; i >= 0; --i)
-	{
-		for(int j = 0; j < COLUMNS; ++j)
-		{
-			printf("%c ", (*board)[j][i] == BLANK_SPACE ? '-' :
-			              (*board[j][i] == PLAYER_ONE ? 'X' : 'O') );
-		}
-		printf("\n");
-	}
-
-	printf("0 1 2 3 4 5 6\n");
-
-	printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-	// this should be replaced by a debug helper method
+	printBoard(board);
 
 	return 0;
 }
+
+/*
+ * Print the board for debug puposes
+ *
+ * Our compiler who art in memory,
+ * Forgive us our code duplication,
+ * As we forgive those who duplicate code against us
+ */
+void MinimaxPlayer::printBoard(gameboard *board)
+{
+    printf("~~~ The duplicate board ~~~\n");
+
+    for(int i = ROWS -1; i >= 0; --i)
+    {
+        for(int j = 0; j < COLUMNS; ++j)
+        {
+            printf("%c ", (*board)[j][i] == BLANK_SPACE ? '-' :
+                          (*board[j][i] == PLAYER_ONE ? 'X' : 'O') );
+        }
+        printf("\n");
+    }
+
+    printf("0 1 2 3 4 5 6\n");
+
+    printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
