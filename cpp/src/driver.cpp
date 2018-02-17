@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
 	gb.printBoard();
 
 	int turn = PLAYER_ONE;
+	int game_status = 0;
 	Position position;
 	for(;;)
 	{
@@ -51,7 +52,7 @@ int main(int argc, char *argv[])
 		if(position.row != -1)
 		{
 			// cycle turn
-			gb.checkWinner(&position, turn);
+			game_status = gb.checkWinner(&position, turn);
 			turn = (++turn, turn % 2);
 		}
 		else
@@ -60,6 +61,9 @@ int main(int argc, char *argv[])
 		}
 
 		gb.printBoard();
+
+		if(game_status != NOT_WIN)
+			break;
 
 	}
 
