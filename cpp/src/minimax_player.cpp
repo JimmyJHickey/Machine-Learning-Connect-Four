@@ -11,7 +11,7 @@
 #include "minimax_player.h"
 
 MinimaxPlayer::MinimaxPlayer(const char *player_name, int player_num, int depth)
-		: Player(player_name, player_num)
+	: Player::Player(player_name, player_num)
 {
 	printf("MinimaxPlayer: %s created as #%d with depth %d\n", player_name, player_num, depth);
 	this->depth = depth;

@@ -12,7 +12,7 @@
 
 
 HumanPlayer::HumanPlayer(const char *player_name, int player_num)
-: Player(player_name, player_num)
+	: Player::Player(player_name, player_num)
 {
 	printf("HumanPlayer: %s created as #%d\n", player_name, player_num);
 }
