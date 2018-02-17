@@ -21,6 +21,10 @@ private:
 	int depth;
 	int minimax(gameboard *board, int depth);
 	int evaluateBoard(gameboard *board);
+	int evalVert(gameboard *board, Position *pos);
+	int evalHorz(gameboard *board, Position *pos);
+	int evalPosDiag(gameboard *board, Position *pos);
+	int evalNegDiag(gameboard *board, Position *pos);
 	void printBoard(gameboard *board);
 };
 

@@ -33,8 +33,12 @@ int main(int argc, char *argv[])
 	// create two players on the heap
 	players[PLAYER_ONE] = new HumanPlayer("Jimmy", PLAYER_ONE);
 	//players[PLAYER_TWO] = new HumanPlayer("Ben", PLAYER_TWO);
-	//players[PLAYER_TWO] = new MinimaxPlayer("Mini", PLAYER_TWO, 1);
-	players[PLAYER_TWO] = new RandomPlayer("Rand", PLAYER_TWO);
+
+	//players[PLAYER_ONE] = new MinimaxPlayer("Mini1", PLAYER_ONE, 1);
+	players[PLAYER_TWO] = new MinimaxPlayer("Mini2", PLAYER_TWO, 1);
+
+	//players[PLAYER_ONE] = new RandomPlayer("Rand1", PLAYER_ONE);
+	//players[PLAYER_TWO] = new RandomPlayer("Rand2", PLAYER_TWO);
 
 	GameBoard gb;
 	gb.printBoard();

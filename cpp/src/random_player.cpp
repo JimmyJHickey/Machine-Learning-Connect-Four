@@ -23,7 +23,7 @@ int RandomPlayer::makeMove(GameBoard &game_board, Position *pos)
 {
 	pos->col = rand() % COLUMNS;
 
-	printf("RandomPlayer \"%s\" is making a move in colmun %d\n", player_name, player_number);
+	printf("RandomPlayer \"%s\" is making a move in colmun %d\n", player_name, pos->col);
 
 	return game_board.playPiece(player_number, pos);
 }
