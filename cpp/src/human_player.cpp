@@ -20,7 +20,7 @@ HumanPlayer::HumanPlayer(const char *player_name, int player_num)
 
 int HumanPlayer::makeMove(GameBoard &game_board, Position *pos)
 {
-	printf("Enter a column number to play a piece: ");
+	printf("%s, enter a column number to play a piece: ", player_name);
 
 	scanf("%d", &pos->col);
 
