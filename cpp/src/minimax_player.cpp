@@ -94,6 +94,8 @@ int MinimaxPlayer::evaluateBoard(gameboard *board)
 
 	printBoard(board);
 
+	// free the board you idiots
+
 	return 0;
 }
 
