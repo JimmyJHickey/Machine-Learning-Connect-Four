@@ -45,8 +45,10 @@ int MinimaxPlayer::evaluateBoard(gameboard *board)
 	// find a piece to evaluate
 	int row_index;
 
+	// for each column
 	for(int col_index = 0; col_index < COLUMNS; ++col_index)
 	{
+		// for each row, from top to bottom or until we hit a piece
 		for(row_index = ROWS -1; row_index >= 0 && (*board)[col_index][row_index] == BLANK_SPACE; --row_index)
 		{
             // if we are on the bottom
@@ -69,9 +71,18 @@ int MinimaxPlayer::evaluateBoard(gameboard *board)
                     goto evaluate;
 			}
 
-            // if there is a column of the left, and a piece down left
-            if(col_index > 0 && (*board)[col_index -1][row_index -1] != BLANK_SPACE)
-                goto evaluate;
+            // if there is a column of the left
+            if(col_index > 0)
+            {
+	            // if there is a piece to the left
+	            if((*board)[col_index -1][row_index] != BLANK_SPACE)
+		            goto evaluate;
+
+	            // if there is a piece down to the left
+	            if((*board)[col_index -1][row_index -1] != BLANK_SPACE)
+		            goto evaluate;
+            }
+
 
             // if we are not evaluating continue and check the next row
             continue;
