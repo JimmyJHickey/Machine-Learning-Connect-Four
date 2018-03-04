@@ -94,11 +94,11 @@ int MinimaxPlayer::evaluateBoard(gameboard *board)
 			pos.col = col_index;
 			pos.row = row_index;
 
-			printf("evalVert ");
-            printf("vert score: %d\n", evalVert(board, &pos));
+			printf("evalVert: ");
+            printf("score: %d\n", evalVert(board, &pos));
 
-            printf("evalHorz \n");
-            printf("horz score: %d\n", evalHorz(board, &pos));
+            printf("evalHorz: ");
+            printf("score: %d\n", evalHorz(board, &pos));
 
 			printf("\n");
 		}
@@ -217,8 +217,6 @@ calc_score:
 		else
 			break;
 
-	printf("left  pot: %d\n", left_pot);
-	printf("right pot: %d\n", right_pot);
 
 	// if only one player has consecutive pieces
 	if(left_scoring_player == right_scoring_player
