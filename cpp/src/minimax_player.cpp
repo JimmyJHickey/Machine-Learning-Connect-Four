@@ -155,32 +155,32 @@ int MinimaxPlayer::evalVert(gameboard *board, Position *pos)
  */
 int MinimaxPlayer::evalHorz(gameboard *board, Position *pos)
 {
-	int left_scoring_player = -1;
+	int left_scoring_player = BLANK_SPACE;
     int left_consecutive = 0;
-	int right_scoring_player = -1;
+	int right_scoring_player = BLANK_SPACE;
     int right_consecutive =  0;
     int check_left_col = pos->col;
 	int check_right_col = pos->col;
 
-    // count any pieces to the left first
+    // count consecutive pieces on either side of the given position
+	// start with the left
 
 	// Ugly incoming
 	//  if there is no space to the left, or
 	//  if there is no piece to the left goto scoring the right side
 	//  reset left check and check the right side
-	// scoring_player gets assigned to the space on the left if the space exists
+	// left_scoring_player gets assigned to the space on the left if the space exists
     if(check_left_col == 0 || (left_scoring_player = (*board)[check_left_col -1][pos->row]) == BLANK_SPACE)
 	    goto score_right;
 
+	// while the left column exists, and
+	//  the piece in it belongs to the left scoring player
+	// check_left_col gets shifted unconditionally
     while(--check_left_col >= 0 && (*board)[check_left_col][pos->row] == left_scoring_player)
         ++left_consecutive;
 
 
     // count the score to the right
-	//  unfortunately very similar to count left
-	//  if you, dear reader, can think of a way to do both the left and right scores together without
-	//  repeating code and without hurting performance that would be lovely
-	//  until then, forgive us our code duplication
 score_right:
 	// Symmetric ugly
 	//  if there is no space to the right, or
@@ -190,6 +190,9 @@ score_right:
 	if(check_right_col == COLUMNS -1 || (right_scoring_player = (*board)[check_right_col +1][pos->row]) == BLANK_SPACE)
 		goto calc_score;
 
+	// while the right column exists and,
+	//  the piece in it belongs to the right scoring player
+	// check_right column gets shifted unconditionally
     while(++check_right_col <= COLUMNS -1 && (*board)[check_right_col][pos->row] == right_scoring_player)
         ++right_consecutive;
 
@@ -238,7 +241,7 @@ calc_score:
 
 
 /*
- * Print the board for debug puposes
+ * Print the board for debug purposes
  *
  * Our compiler who art in memory,
  * Forgive us our code duplication,
